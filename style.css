@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400');
+
+* {
+	box-sizing: border-box;
+	/*border: 1px solid red;*/
+	
+}
+
+row::after, row::befoer {
+	content: "";
+	display: table;
+}
+
+row::after {
+	clear: both;
+}
+
+/* general styles */
+body {
+	font-family: 'Raleway', sans-serif;
+	background-color: #F6F7FA;
+	margin: 0;
+}
+
+h1 {
+	font-weight: 300;
+	margin:0;
+	padding:0;
+	font-size: 2.8em;
+}
+
+p {
+	font-size: .8em;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin-top: 70px;
+}
+
+.container-flex {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}
+
+.col1 {
+	background-color: #F5989D;
+}
+
+.col2 {
+	background-color: #615F7D;
+}
+
+.col3 {
+	background-color: #BD8CBF;
+}
+
+.col4 {
+	background-color: #82CA9C;
+}
+
+[class*="hero"] h1, [class*="hero"] p {
+	color: white;
+	text-shadow: 2px 2px 2px black;
+}
+
+/*header section specific styles*/
+.hero-container, .mid-container, .reasons-container {
+	width: 100%;
+}
+
+.hero-container .hero img {
+	position: absolute;
+	top: 50vh;
+	left: 45vw;
+	width: 350px;
+}
+
+.hero, .mid-hero {
+	position: relative;
+	width: 100%;
+	background-color: lightblue;
+	background-image: url('https://static.pexels.com/photos/206359/pexels-photo-206359.jpeg');
+	background-size: cover;
+	background-position: 10%;
+	height: 100vh;
+	margin: 0 auto;
+}
+
+.hero .slogan {
+	position: relative;
+	top: 55%;
+	left: 15%;
+	width: 30%;
+}
+
+/*story text below hero and slogan*/
+.story, .text-columns {
+	width: 75%;
+	margin-left: 15%;
+	margin-right: 10%;
+}
+
+.story div:not(.item) {
+	padding: 10px;
+}
+
+.story>.item{
+	flex: 80%;
+	-webkit-flex: 80%;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}
+
+.story>.item>h1 {
+	flex: 100%;
+	-webkit-flex: 100%;
+	padding: 10px;
+}
+
+.story>.item>div {
+	flex: 1;
+	-webkit-flex: 1;
+	color: gray;
+}
+
+.story>.item>div:last-child {
+	padding-bottom: 0px;
+	align-self: center;
+}
+
+/*cards below story-text*/
+.cards {
+	width: 85%;
+	margin-left: 15%;
+	height: auto;
+}
+
+.cards>.item {
+	flex: 50%;
+	-webkit-flex: 45%;
+	height: auto;g
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}
+
+.cards>.item>.inner-item {
+	flex: 50%;
+	-webkit-flex: 50%;
+	height: 250px;
+	position: relative;
+}
+
+.cards>.item>.inner-item-lg {
+	flex: 100%;
+	-webkit-flex: 100%;
+	height: 250px;
+	position: relative;
+}
+
+.cards>.item>[class*="item"]>img {
+	width: 100%;
+	height: 250px;
+}
+
+.card, .card-lg {
+	position: absolute;
+	color: white;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 5%;
+}
+
+/*text columns below cards (some styles apply to 'reasons' section as well)*/
+.text-columns h1 {
+	flex: 100%;
+	-webkit-flex: 100%;
+}
+
+.text-columns>.item:not(h1) {
+	flex: 1;
+	-webkit-flex: 1;
+	padding: 20px 20px 0 0;
+}
+
+.text-columns>.item>p:not(:first-child) {
+	color: gray;
+}
+
+/*mid-section jumbotron*/
+.mid-container {
+	margin-top: 70px;
+}
+
+.mid-container .mid-hero {
+	background-image: url('https://static.pexels.com/photos/315938/pexels-photo-315938.jpeg');
+}
+
+.mid-container .card-lg {
+	width: 40%;
+	left: 15%;
+	padding: 0;
+}
+
+/*reasons section*/
+.reasons-container {
+	padding: 100px 0;
+	background-color: rgb(130,202,156);
+	color: white;
+}
+
+.reasons-container>.reasons{
+	margin: 0 0 0 15%;
+}
+
+.reasons-container>.reasons>.item>p:last-child{
+	color: white;
+}
+
+/*modals section*/
+.modals {
+	height: auto;
+	justify-content: space-around;
+}
+
+.modals>.modal-card {
+	max-width: 45%;
+	padding: 20px;
+	flex: 1;
+}
+
+.modals>.modal-card>* {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.modals>.modal-card>button{
+	border-radius: 3px;
+	padding: 5px;
+	border: none;
+	text-transform: uppercase;
+	color: white;
+	background-color: rgba(225,225,225, 0.6);
+	padding: 10px;
+}
+
+.modals>.modal-card>button.price {
+	padding: 15px;
+	background-color: rgba(130,202,156, 0.3);
+
+}
+
+.modals>.modal-card>div>i {
+	font-size: 1.6em;
+	color: lightgray;
+	padding-right: 10px
+}
+
+.modals>.modal-card:hover {
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 10px 10px 80px 1px rgba(0,0,0,0.75);
+}
+
+.modals>.modal-card:hover button {
+	background-color: #BD8CBF;
+}
+
+.modals>.modal-card:hover button.price {
+	background-color: rgba(130,202,156, 1);
+}
+
+/*contacts section*/
+.mid-container.contact-container {
+	background-color: #192431;
+}
+
+.contact {
+	height: auto;	
+}
+
+.contact p, .contact ul {
+	color: white;
+	font-size: .8em;
+}
+
+.contact>.contact-card {
+	flex: 1;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	padding: 50px 20px 50px 20px;
+}
+
+.contact>.contact-card:last-child {
+	align-content: flex-start;
+}
+
+.contact>.contact-card:last-child>p:first-child {
+	width: 100%;
+}
+
+.contact>.contact-card:last-child>p:last-child {
+	color: darkgray;
+	font-size: .7em;
+}
+
+.contact>.contact-card:last-child>form {
+	height: 60px;
+	width: auto;
+}
+
+.contact>.contact-card:last-child>form>input {
+	display: block;
+	height: 30px;
+}
+
+.contact>.contact-card:last-child>form>.send-button {
+	border: none;
+	height: 0px;
+	width: 100%;
+	border-radius: 0 0 5px 5px;
+	background-color: #82CA9C;
+	opacity: 0;
+	color: white;
+	text-transform: uppercase;
+	transition: .5s;
+}
+
+.contact>.contact-card:last-child>form>input:focus  ~.send-button{
+	opacity: 1;
+	height: 30px;
+	transition: .5s linear;
+}
+
+.contact>.contact-card>.inner-text-up {
+	flex: 100%;
+}
+
+.contact>.contact-card>.inner-text-bottom {
+	flex: 30%;
+}
+
+/*footer*/
+footer {
+	background-color: black;
+}
+
+footer p {
+	margin: 0;
+	padding: 10px 0 10px 0;
+	text-align: center;
+	color: white
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
