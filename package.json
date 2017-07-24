@@ -1,0 +1,30 @@
+{
+  "name": "kodilla-3_4project",
+  "version": "1.0.0",
+  "description": "Project from kodilla Bootcamp, module 3.4",
+  "main": "index.js",
+  "scripts": {
+    "test": "kodilla-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukaszplac/Project3_4.git"
+  },
+  "keywords": [
+    "kodilla",
+    "grunt"
+  ],
+  "author": "Lukasz Plac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukaszplac/Project3_4/issues"
+  },
+  "homepage": "https://github.com/lukaszplac/Project3_4#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
